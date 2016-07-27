@@ -74,7 +74,8 @@ function vhost (hostname, handle) {
  */
 
 function hostnameof (req) {
-  var host = req.headers.host
+  //var host = req.headers.host
+  var host = req.headers['x-forwarded-host']
 
   if (!host) {
     return
